@@ -1,5 +1,10 @@
 .wrapper {
-	margin-bottom: 25px;
+	border-bottom: 1px solid gray;
+	padding: 12px 0;
+}
+
+.wrapper:last-of-type {
+	border-bottom: 0;
 }
 
 .wrapper button {
@@ -15,6 +20,7 @@
 	opacity: 0.9;
 	outline: none;
 	padding: 5px 10px;
+	text-align: left;
 }
 
 .wrapper button.busy {

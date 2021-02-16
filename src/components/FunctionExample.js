@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { deccrementFunction, slowIncrementFunction } from '../redux/actions';
+import classnames from 'classnames';
 
 const FunctionExample = () => {
 	const count = useSelector((state) => state.functionReducers.count);
@@ -15,12 +16,16 @@ const FunctionExample = () => {
 	};
 	return (
 		<div className="wrapper">
-			<div>Count: {count}</div>
+			<div>Function Count: {count}</div>
 			<div>
-				<button disabled={isLoading} onClick={increment}>
-					Increment
+				<button
+					className={classnames({ busy: isLoading })}
+					disabled={isLoading}
+					onClick={increment}
+				>
+					Increment Functions Counter
 				</button>
-				<button onClick={decrement}>Decrement</button>
+				<button onClick={decrement}>Decrement Functions Counter</button>
 			</div>
 		</div>
 	);

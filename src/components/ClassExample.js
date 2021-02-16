@@ -12,10 +12,10 @@ class ComponentExample extends Component {
 		};
 		return (
 			<div className="wrapper">
-				<div>Count: {this.props.count}</div>
+				<div>Classes Count: {this.props.count}</div>
 				<div>
-					<button onClick={incrementCount}>Increment</button>
-					<button onClick={decrementCount}>Decrement</button>
+					<button onClick={incrementCount}>Increment Class Counter</button>
+					<button onClick={decrementCount}>Decrement Class Counter</button>
 				</div>
 			</div>
 		);

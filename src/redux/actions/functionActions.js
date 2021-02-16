@@ -15,6 +15,6 @@ export const slowIncrementFunction = () => {
 		setTimeout(() => {
 			dispatch(incrementFunction());
 			dispatch(setLoading(false));
-		}, 2000);
+		}, 1000);
 	};
 };

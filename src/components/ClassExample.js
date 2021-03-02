@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { decrementClass, incrementClass } from '../redux/actions';
 
-class ComponentExample extends Component {
+class ClassExample extends Component {
 	render() {
 		const { count, decrement, increment } = this.props;
 
@@ -38,4 +38,4 @@ const mapDispatchToProps = (dispatch) => {
 	};
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(ComponentExample);
+export default connect(mapStateToProps, mapDispatchToProps)(ClassExample);

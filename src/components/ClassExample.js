@@ -1,18 +1,22 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { CLASS_DEC, CLASS_INC } from '../redux/actionTypes';
+import { decrementClass, incrementClass } from '../redux/actions';
 
 class ComponentExample extends Component {
 	render() {
+		const { count, decrement, increment } = this.props;
+
 		const incrementCount = () => {
-			this.props.increment();
+			increment();
 		};
+
 		const decrementCount = () => {
-			this.props.decrement();
+			decrement();
 		};
+
 		return (
 			<div className="wrapper">
-				<div>Classes Count: {this.props.count}</div>
+				<div>Classes Count: {count}</div>
 				<div>
 					<button onClick={incrementCount}>Increment Class Counter</button>
 					<button onClick={decrementCount}>Decrement Class Counter</button>
@@ -29,8 +33,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
 	return {
-		increment: () => dispatch({ type: CLASS_INC }),
-		decrement: () => dispatch({ type: CLASS_DEC }),
+		increment: () => dispatch(incrementClass()),
+		decrement: () => dispatch(decrementClass()),
 	};
 };
 
